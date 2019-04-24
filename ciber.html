@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Basic</title>
+    <style>
+        #container{
+            width: 400px;
+            margin: 10px auto;
+            padding: 10px;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <div id='container'>
+        <h2>Calculadora:</h2>
+        <h3 id="calculator"></h3>
+    </div>
+    <script>
+        /*Ejercicio 1*/
+        console.log('Hola mundo');
+
+        /*Ejercicio 2*/
+        alert('¡Me llamo Jesús López!');
+
+        /*Ejercicio 3*/
+        var name = 'Jesús';
+        var surname = 'López';
+        console.log(name + ' ' + surname);
+
+        /*Ejercicio 4*/
+        var num1 = 32;
+        var num2 = 54;
+        console.log('La suma entre ' + num1 + ' y ' + num2 + ' es ' + (num1 + num2));
+
+        /*Ejercicio 5*/
+        var nota_examen = 5;
+        if (nota_examen < 5) {
+            alert('¡Ohh! Has suspendido el examen con un ' + nota_examen);
+        } else {
+            alert('¡Enhorabuena! Has aprobado el examen con un ' + nota_examen);
+        }
+
+        /*Ejercicio 6*/
+        var text = 'Tinc un cotxe de color blau';
+        console.log(text.replace('blau', 'verd'));
+        console.log(text.replace(/o/g, 'u'));
+
+        /*Ejercicio 7*/
+        var objectList = ['taula', 'cadira', 'ordinador', 'libreta'];
+        for (i = 0; i < objectList.length; i++) {
+            console.log('El objeto ' + objectList[i] + ' está en la posición ' + i + '.');
+        }
+
+        /*Ejercicio 8*/
+        function calculator(operator, valor1, valor2) {
+            switch(operator) {
+                case 'suma':
+                    return valor1 + ' + ' + valor2 + ' = ' + (valor1 + valor2);
+                    break;
+                case 'resta':
+                    return valor1 + ' - ' + valor2 + ' = ' + (valor1 - valor2);
+                    break;
+                case 'multiplicación':
+                    return valor1 + ' x ' + valor2 + ' = ' + (valor1 * valor2);
+                    break;
+                default:
+                    return 'Operador no reconocido.';
+            }
+        }
+
+        var resultat = calculator('suma', 5, 3);
+        document.getElementById('calculator').innerHTML = resultat;
+    </script>
+</body>
+</html>
